@@ -46,7 +46,7 @@ def project_image(proj, src_file, dst_dir, tmp_dir, video=False):
 
     os.makedirs(dst_dir, exist_ok=True)
     filename = os.path.join(dst_dir, os.path.basename(src_file)[:-4] + '.png')
-    misc.save_image_grid(proj.get_images(), filename, drange=[-1,1])
+    #misc.save_image_grid(proj.get_images(), filename, drange=[-1,1])  #don't save image, no sense
     filename = os.path.join(dst_dir, os.path.basename(src_file)[:-4] + '.npy')
     np.save(filename, proj.get_dlatents()[0])
 
